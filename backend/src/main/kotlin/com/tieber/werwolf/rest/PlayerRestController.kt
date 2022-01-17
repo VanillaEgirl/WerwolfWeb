@@ -9,14 +9,14 @@ import org.springframework.web.bind.annotation.RestController
 
 @RestController
 @CrossOrigin(origins = [Constants.FRONTEND_PATH])
-class RolesRestController {
-    @GetMapping("/allroles")
-    fun getRoles(): List<String> {
-        return GameState.allRoles
+class PlayerRestController {
+    @GetMapping("/getPlayers")
+    fun getPlayers(): List<String> {
+        return GameState.currentState.players
     }
 
-    @PostMapping("/addrole")
-    fun addRole(role: String) {
-        println("new Role: $role")
+    @PostMapping("/setPlayers")
+    fun setPlayers(players: List<String>) {
+        GameState.currentState.players = players
     }
 }
