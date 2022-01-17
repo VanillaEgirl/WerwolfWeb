@@ -1,0 +1,14 @@
+.center-block {
+  top:50%;
+  left: 50%;
+  transform: translate3d(-50%,-50%, 0);
+  position: absolute;
+}
+
+.werwolf-logo {
+  width: 300px !important;
+}
+
+.button {
+  width: unset !important;
+}
