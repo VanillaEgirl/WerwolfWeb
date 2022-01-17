@@ -1,7 +1,6 @@
 import './App.css';
-import BackendService from './BackendService.js';
+import BackendService from '../../services//BackendService.js';
 import React from "react";
-
 class App extends React.Component {
 
     constructor(props) {
@@ -39,10 +38,9 @@ class App extends React.Component {
 
     render() {
         return (
-            <div className="App">
-                <header className="App-header p-5">
-                    <div>asdf</div>
-                </header>
+            <div>
+                <h1>Werwolf Web</h1>
+                Werwolf Web
             </div>
         );
     }
