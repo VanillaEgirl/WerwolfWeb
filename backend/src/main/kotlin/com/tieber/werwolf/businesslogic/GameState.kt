@@ -9,5 +9,4 @@ class GameState(
         var allRoles = mutableListOf("Werwolf", "Dorfbewohner", "Seherin")
         var currentState = GameState(mutableListOf("Adam", "Eva"), mutableListOf(), mutableListOf())
     }
-
 }

@@ -24,7 +24,7 @@ class _BackendService {
 
     post(resource, params) {
         let query = this.buildQueryParams(params);
-        return this.fetch(resource + query, {method: 'POST'});
+        return this.fetch(resource + query, {method: 'POST'}).then(this._processJSONResponse);
     }
 
     buildQueryParams(params) {
@@ -66,8 +66,10 @@ class _BackendService {
                 console.log(e)
             }
 
-            json._statusCode = response.status;
-            json._statusText = response.statusText;
+            if(typeof json === 'object') {
+                json._statusCode = response.status;
+                json._statusText = response.statusText;
+            }
 
             return response.ok ? json : Promise.reject(json);
         });
